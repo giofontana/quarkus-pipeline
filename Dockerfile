@@ -40,7 +40,7 @@ RUN microdnf install curl ca-certificates ${JAVA_PACKAGE} \
     && chown 1001 /deployments/run-java.sh \
     && chmod 540 /deployments/run-java.sh \
     && echo "securerandom.source=file:/dev/urandom" >> /etc/alternatives/jre/lib/security/java.security \
-    && rpm -e curl-* rpm-libs-* rpm-* libsolv-* libdnf-* libmodulemd-* microdnf-* >/dev/nul 2>1
+    && rpm -e curl-* rpm-libs-* rpm-* libsolv-* libdnf-* libmodulemd-* microdnf-* >/dev/null 2>1
 
 # Configure the JAVA_OPTIONS, you can add -XshowSettings:vm to also display the heap size.
 ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
