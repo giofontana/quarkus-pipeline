@@ -1,26 +1,3 @@
-####
-# This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
-#
-# Before building the container image run:
-#
-# ./mvnw package -Dquarkus.package.type=legacy-jar
-#
-# Then, build the image with:
-#
-# docker build -f src/main/docker/Dockerfile.legacy-jar -t quarkus/getting-started-legacy-jar .
-#
-# Then run the container using:
-#
-# docker run -i --rm -p 8080:8080 quarkus/getting-started-legacy-jar
-#
-# If you want to include the debug port into your docker image
-# you will have to expose the debug port (default 5005) like this :  EXPOSE 8080 5050
-#
-# Then run the container using :
-#
-# docker run -i --rm -p 8080:8080 -p 5005:5005 -e JAVA_ENABLE_DEBUG="true" quarkus/getting-started-legacy-jar
-#
-###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3
 #FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5
 
