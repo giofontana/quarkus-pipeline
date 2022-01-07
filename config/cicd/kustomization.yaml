@@ -1,0 +1,6 @@
+namespace: cicd
+
+resources:
+- namespaces/cicd-environment.yaml
+- rolebindings/registry-pull-rolebinding.yaml
+- pipeline/build-image.yaml
