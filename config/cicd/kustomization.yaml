@@ -3,4 +3,6 @@ namespace: cicd
 resources:
 - namespaces/cicd-environment.yaml
 - rolebindings/registry-pull-rolebinding.yaml
+- tasks/acs-deployment-check.yaml 
 - pipeline/build-image.yaml
+- pipeline/validate-build.yaml 
